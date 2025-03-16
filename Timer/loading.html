@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="loading_data_button">Load Data</button>
+    <h1 id="myValue">My Value Hereeeee</h1>
+
+    <script>
+      let loading_data_button = document.getElementById("loading_data_button");
+      let myValue = document.querySelector("#myValue");
+
+      loading_data_button.addEventListener("click", function () {
+        myValue.innerText = "Loading...";
+        loading_data_button.disabled = true;
+        setTimeout(function () {
+          myValue.innerText = "My Value Hereeeee";
+          loading_data_button.disabled = false;
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
